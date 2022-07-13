@@ -1,6 +1,6 @@
 import { produtos } from "../data/produtos.js";
 
-export const mostrarProduto = (req, res) => {
+export const mostrarProduto = async (req, res) => {
     const { idProduto } = req.params;
     const idProdutoNumero = Number(idProduto);
 
@@ -10,4 +10,3 @@ export const mostrarProduto = (req, res) => {
 
     return res.send(produto);
 };
-

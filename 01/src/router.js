@@ -9,4 +9,3 @@ export const roteador = express();
 roteador.get("/produtos", listarProdutos);
 roteador.get("/produtos/:idProduto", mostrarProduto);
 roteador.get("/produtos/:idProduto/frete/:cep", calcularFrete);
-

@@ -10,6 +10,14 @@ export const calcularFrete = async (req, res) => {
         return elemento.id === idProdutoNumero;
     } );
 
+    if (!produto) {
+        return res.status(404).json(
+            { 
+                mensagem: 'Produto não encontrado' 
+            }
+        );
+    }
+
     const estadoDoCep = await getStateFromZipcode(cep);
     
     let frete = 0;
@@ -36,4 +44,3 @@ export const calcularFrete = async (req, res) => {
 
     return res.send(infoFrete);
 };
-
