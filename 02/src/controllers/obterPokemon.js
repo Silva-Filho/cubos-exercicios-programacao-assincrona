@@ -18,4 +18,3 @@ export const obterPokemon = async (req, res) => {
 
     return res.send(pokemonEscolhido);
 };
-
